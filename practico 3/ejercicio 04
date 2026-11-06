@@ -1,0 +1,52 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    // Declaración de variables
+    string nombre;
+    double salarioMensual;
+    int mesesTrabajados;
+    double aguinaldo = 0.0;
+
+    cout << "=== CÁLCULO DE AGUINALDO NAVIDEÑO (LEGISLACIÓN BOLIVIANA) ===" << endl;
+
+    // Captura de datos
+    cout << "Ingrese el nombre del trabajador: ";
+    getline(cin, nombre);
+
+    cout << "Ingrese el salario mensual (Bs.): ";
+    cin >> salarioMensual;
+
+    cout << "Ingrese el número de meses trabajados en el año (1-12): ";
+    cin >> mesesTrabajados;
+    cout << "\n--------------------------------------------------" << endl;
+    // Validación de meses y aplicación de la normativa laboral
+    if (mesesTrabajados < 1 || mesesTrabajados > 12) {
+        cout << "Error: El número de meses trabajados debe estar entre 1 y 12." << endl;
+    } else if (salarioMensual < 0) {
+        cout << "Error: El salario mensual no puede ser un valor negativo." << endl;
+    } else if (mesesTrabajados < 3) {
+        // En Bolivia se requiere un mínimo de 3 meses trabajados para percibir aguinaldo
+        cout << "Trabajador: " << nombre << endl;
+        cout << "Observación: No le corresponde aguinaldo por no haber cumplido el mínimo de 3 meses de trabajo en la gestión." << endl;
+        cout << "Monto a pagar: Bs. 0" << endl;
+    } else {
+        // Cálculo del aguinaldo (completo o en duodécimas)
+        if (mesesTrabajados == 12) {
+            aguinaldo = salarioMensual;
+        } else {
+            aguinaldo = (salarioMensual * mesesTrabajados) / 12.0;
+        }
+        // Mostrar resultados usando únicamente iostream
+        cout << "Trabajador: " << nombre << endl;
+        cout << "Salario base: Bs. " << salarioMensual << endl;
+        cout << "Meses calculados: " << mesesTrabajados << " / 12" << endl;
+        cout << "Monto del Aguinaldo de Navidad: Bs. " << aguinaldo << endl;
+    }
+
+    cout << "--------------------------------------------------" << endl;
+
+    return 0;
+}
