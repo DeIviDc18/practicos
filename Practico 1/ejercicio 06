@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+   double a, b;     //comparar 2 numeros
+    cout << "Primer numero: ";
+    cin >> a;
+    cout << "Segundo numero: ";
+    cin >> b;
+
+    if (a > b)   //primera condicion
+        cout << "El mayor es: " << a << endl;  //resultado de la primera condicion
+    else if (b > a)  //segunda condicion
+        cout << "El mayor es: " << b << endl;  //result. de la seg. condicion
+    else
+        cout << "Los dos numeros son iguales" << endl;
+    return 0;
+}
+
+//condicion cumplida
