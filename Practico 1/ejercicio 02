@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a,b;    //variable para los 2 numeros a sumar
+    int c;      //variable par el resultado de la suma
+    cout<<"ingrese primer numero= ";
+    cin>>a;
+    cout<<"ingrese segundo numero para la suma= ";
+    cin>>b;
+    cout<<"RESULTADO DE LA SUMA DE LOS 2 NUMEROS ES= "<<endl;
+    c=a+b;
+    cout<<c<<endl;
+
+    return 0;
+}
+
+//suma sencilla de dos numeros solo los expandi un poquito
+//puso ser directo un =
+//int a,b,c;
+//c=a+b
+//cin>>a;
+//cin>>b;
+//cout<<c;
