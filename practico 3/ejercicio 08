@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double A, B, C;
+    double D, E, F;
+
+    cout << "=== EJERCICIO 2: SISTEMA DE ECUACIONES 2x2 ===" << endl;
+    cout << "Ecuación 1 (Ax + By = C):" << endl;
+    cout << "Ingrese A: "; cin >> A;
+    cout << "Ingrese B: "; cin >> B;
+    cout << "Ingrese C: "; cin >> C;
+
+    cout << "\nEcuación 2 (Dx + Ey = F):" << endl;
+    cout << "Ingrese D: "; cin >> D;
+    cout << "Ingrese E: "; cin >> E;
+    cout << "Ingrese F: "; cin >> F;
+
+    // Determinantes usando la Regla de Cramer
+    double detPrincipal = (A * E) - (B * D);
+    double detX         = (C * E) - (B * F);
+    double detY         = (A * F) - (C * D);
+
+    cout << "\n--------------------------------------------------" << endl;
+    if (detPrincipal != 0) {
+        // Solución única
+        double x = detX / detPrincipal;
+        double y = detY / detPrincipal;
+        cout << "Sistema con SOLUCIÓN ÚNICA:" << endl;
+        cout << "X = " << x << endl;
+        cout << "Y = " << y << endl;
+    } else {
+        if (detX == 0 && detY == 0) {
+            cout << "El sistema tiene INFINITAS SOLUCIONES (Indeterminado)." << endl;
+        } else {
+            cout << "El sistema NO TIENE SOLUCIÓN (Incompatible)." << endl;
+        }
+    }
+    cout << "--------------------------------------------------" << endl;
+
+    return 0;
+}
