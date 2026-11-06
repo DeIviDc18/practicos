@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+ //tienda q vende cuadernos a 12
+    int cuadernos=12;
+    int c;  //c de cuantos comprar
+    int t;   //t de total a pagar
+
+
+    cout<<"total de cuadernos a comprar: ";
+    cin>>c;
+    t=c*cuadernos;
+
+    cout<<"total a pagar un total de: "<<t<<"$"<<endl;
+
+    return 0;
+}
+
+//no problem sin ia todavia
