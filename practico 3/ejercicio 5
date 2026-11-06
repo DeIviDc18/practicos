@@ -1,0 +1,61 @@
+#include <iostream>
+#include <cmath> // Necesaria para la función pow()
+
+using namespace std;
+
+int main() {
+    // Declaración de variables
+    double C; // Capital prestado
+    double tasaPorcentaje; // Tasa de interés mensual en porcentaje
+    double T; // Tasa de interés en decimal
+    int N;   // Número de cuotas
+
+    cout << "=== CALCULO DE CREDITO DE CONSUMO ===" << endl;
+
+    // Captura de datos
+    cout << "Ingrese el capital prestado (C): ";
+    cin >> C;
+
+    cout << "Ingrese la tasa de interés mensual (%): ";
+    cin >> tasaPorcentaje;
+    cout << "Ingrese el número de cuotas (N): ";
+    cin >> N;
+
+    cout << "\n--------------------------------------------------" << endl;
+
+    // Validación de entradas
+    if (C <= 0 || N <= 0 || tasaPorcentaje < 0) {
+        cout << "Error: Ingrese valores válidos (Capital y Cuotas deben ser mayores a cero)." << endl;
+    } else {
+        // Convertir la tasa porcentual a valor decimal (ej. 2% -> 0.02)
+        T = tasaPorcentaje / 100.0;
+
+        double cuotaMensual;
+
+        // Si la tasa es 0%, la cuota es simplemente C / N
+        if (T == 0) {
+            cuotaMensual = C / N;
+        } else {
+            // Aplicación de la fórmula: Cuota = C * (T * (1 + T)^N) / ((1 + T)^N - 1)
+            double factor = pow(1 + T, N);
+            cuotaMensual = C * (T * factor) / (factor - 1);
+        }
+
+        // Cálculos de totales
+        double montoTotal = cuotaMensual * N;
+        double interesTotal = montoTotal - C;
+
+        // Mostrar resultados
+        cout << "Capital prestado: " << C << endl;
+        cout << "Tasa mensual: " << tasaPorcentaje << "%" << endl;
+        cout << "Número de cuotas: " << N << endl;
+        cout << "--------------------------------------------------" << endl;
+        cout << "Cuota mensual: " << cuotaMensual << endl;
+        cout << "Monto total a pagar: " << montoTotal << endl;
+        cout << "Interés total cobrado: " << interesTotal << endl;
+    }
+
+    cout << "--------------------------------------------------" << endl;
+
+    return 0;
+}
