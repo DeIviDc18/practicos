@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int totalMinutos;
+    cout << "=== EJERCICIO 3: CONVERSIÓN DE MINUTOS ===" << endl;
+    cout << "Ingrese la cantidad total de minutos: ";
+    cin >> totalMinutos;
+    if (totalMinutos < 0) {
+        cout << "Error: La cantidad de minutos no puede ser negativa." << endl;
+    } else {
+        // Constantes de tiempo
+        const int MINUTOS_POR_HORA = 60;
+        const int MINUTOS_POR_DIA  = 24 * 60; // 1440 minutos
+        // Descomposición
+        int dias    = totalMinutos / MINUTOS_POR_DIA;
+        int resto   = totalMinutos % MINUTOS_POR_DIA; // Minutos restantes tras extraer días
+        int horas   = resto / MINUTOS_POR_HORA;
+        int minutos = resto % MINUTOS_POR_HORA;       // Minutos sobrantes
+        cout << "\n--------------------------------------------------" << endl;
+        cout << totalMinutos << " minutos -> " 
+             << dias << " días, " 
+             << horas << " horas, " 
+             << minutos << " minutos" << endl;
+        cout << "--------------------------------------------------" << endl;
+    }
+    return 0;
+}
