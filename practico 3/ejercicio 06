@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+    // Declaración de variables
+    double C,F,K,Ra; // Temperatura en Celsius
+    cout<<"CONVERSOR DE TEMPERATURAS" << endl;
+    cout << "Ingrese la temperatura en grados Celsius (°C): ";
+    cin >> C;
+    // Validación: El cero absoluto en Celsius es -273.15 °C
+    if (C < -273.15) {
+        cout << "\nError: La temperatura no puede ser menor al cero absoluto (-273.15 °C)." << endl;
+    } else {
+        // Conversión utilizando las fórmulas especificadas
+        F = (C * 9.0 / 5.0) + 32.0;
+        K = C + 273.15;
+        Ra = (C + 273.15) * 9.0 / 5.0;
+        // Mostrar resultados
+        cout << "Temperatura ingresada: " << C << " °C" << endl;
+        cout << "--------------------------------------------------" << endl;
+        cout << "Fahrenheit (°F) : " << F << endl;
+        cout << "Kelvin (K)      : " << K << endl;
+        cout << "Rankine (°Ra)   : " << Ra << endl;
+    }
+    return 0;
+}
