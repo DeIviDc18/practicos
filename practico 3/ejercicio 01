@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "a) PREPARAR UNA TAZA DE TE\n";
+    cout << "   1. Inicio?\n";
+    cout << "   2. Llenar la olla o tetera con agua\n";
+    cout << "   3. Calentar el agua hasta que hierva\n";
+    cout << "   4. Poner el saquito o las hojas de te en la taza\n";
+    cout << "   5. Verter el agua caliente en la taza\n";
+    cout << "   6. Esperar 3 minutos\n";
+    cout << "   7. Retirar el saquito\n";
+    cout << "   8. Agregar azucar si se desea\n";
+    cout << "   9. Fin\n\n";
+
+    cout << "b) RETIRAR DINERO DE UN CAJERO AUTOMATICO\n";
+    cout << "   1. Inicio\n";
+    cout << "   2. Insertar la tarjeta\n";
+    cout << "   3. Ingresar el PIN\n";
+    cout << "   4. Si el PIN es incorrecto, volver al paso 3 (maximo 3 intentos)\n";
+    cout << "   5. Elegir la opcion 'Retiro'\n";
+    cout << "   6. Ingresar el monto\n";
+    cout << "   7. Si el monto es mayor al saldo, mostrar error y volver al paso 6\n";
+    cout << "   8. Retirar el dinero y la tarjeta\n";
+    cout << "   9. Fin\n\n";
+
+    cout << "c) RESOLVER LA ECUACION CUADRATICA ax^2 + bx + c = 0\n";
+    cout << "   1. Inicio\n";
+    cout << "   2. Leer a, b, c\n";
+    cout << "   3. Si a = 0 y b = 0: es degenerada (sin solucion o identidad)\n";
+    cout << "   4. Si a = 0 y b != 0: x = -c / b\n";
+    cout << "   5. Si a != 0: calcular d = b^2 - 4ac\n";   //la discriminante
+    cout << "   6. Si d > 0: x1 = (-b + raiz(d)) / 2a, x2 = (-b - raiz(d)) / 2a\n";
+    cout << "   7. Si d = 0: x = -b / 2a\n";
+    cout << "   8. Si d < 0: raices complejas (-b / 2a) +- (raiz(-d) / 2a) i\n";
+    cout << "   9. Mostrar el resultado\n";
+    cout << "  10. Fin\n";
+    return 0;
+}
+
+// para no estar poniendo <<end; en cada uno ponia \n para el orden
+// lo q genera el \n\n es q aparte de saltar una linea salta otra mas
