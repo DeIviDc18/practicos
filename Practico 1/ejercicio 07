@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+    int n;    //n de nota :v
+
+    cout<<"ingrese nota final(0-100): ";
+    cin >> n;
+    if(n >= 0 && n<=100) {           //condicion de and para validar solo lo de adentro
+        if (n>=51) {
+            cout<<"APROBADO"<<endl;
+        } else {
+            cout<<"REPROBADO"<<endl;
+        }
+
+    }else {
+        cout<<"[ERROR]Nota invalida";
+    }
+    return 0;
+}
