@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main() {
+double pi=3.1415;
+    double AreaLateral,Areatotal,Volumen;
+    double R,H;   //Radio y Altura
+
+    cout<<"introdusca radio del cilindro: ";
+    cin>>R;
+    cout<<"introdusca altura del cilindro";
+    cin>>H;
+
+    AreaLateral=2*pi*R*H;
+    Areatotal=2*pi*R*(R+H);
+    Volumen=pi*R*R*H;
+
+    cout<<"\n--AREAS ENCONTRADAS DEL CILINDRO--\n\n";
+    cout<<"AreaLateral= "<<AreaLateral<<endl;
+    cout<<"Areatotal= "<<Areatotal<<endl;
+    cout<<"Volumen= "<<Volumen<<endl;
+
+    return 0;
+}
