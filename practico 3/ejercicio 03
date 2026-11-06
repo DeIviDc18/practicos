@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+    double p1,p2,ef,pr;
+    double Notafinal;
+
+    //2 parciales q valen 25 cada uno
+    cout<<"nota del primer parcial(25)= ";
+        cin>>p1;
+    cout<<"nota del segundo parcial(25)= ";
+        cin>>p2;
+    //examen final de 30 puntos
+    cout<<"nota del Parcial Final(30)= ";
+        cin>>ef;
+    //nota de proyecto
+    cout<<"nota del proyecta final(20)= ";
+    cin>>pr;
+
+    Notafinal =p1 + p2 + ef + pr;
+    cout<<"LA NOTA FINAL SERIA = "<<Notafinal;
+    
+    return 0;
+}
+
+//nota final de alguien(yo)
