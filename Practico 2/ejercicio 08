@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+    double monto,total;
+    cout<<"monto a pagar: ";
+    cin>>monto;
+
+    if(monto>100) {
+        total=monto-monto*0.10;  //0.10 = %10
+        cout<<"total a pagar con descuento: "<<total<<endl;
+    }else {
+        total=monto;
+        cout<<"total a pagar sin descuento: "<<total<<endl;
+    }
+    return 0;
+}
+
+//ejercicio medio tarde por q tuve como 20 minutos de sueño

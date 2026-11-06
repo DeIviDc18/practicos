@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+    double horas, pagoHora, salario;
+    cout<<"horas trabajadas: ";
+    cin>>horas;
+    cout<<"pago por hora: ";
+    cin>>pagoHora;
+    salario=horas*pagoHora;
+    if (horas>40) {
+        salario=salario+(salario*0.1);  //se implementa la paga del 10
+        cout<<"salario: "<<salario<<endl;
+    }else {
+        cout<<"salario: "<<salario<<endl;
+    }
+    return 0;
+}
+
+//simple y hermoso 

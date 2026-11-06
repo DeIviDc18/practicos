@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+   //area de un triangulo area=(base*altura)/2
+    int a;      //area
+    int b,h;    //base y altura
+    cout<<"ingrese base del trinagulo";
+    cin>>b;
+    cout<<"ingrese altura del trinagulo";
+    cin>>h;
+
+    a=(b*h)/2;
+
+    cout<<"el area del Triangulo es: "<<a<<endl;
+    return 0;
+}
+
+//ejercicio muy facil del triangulo
