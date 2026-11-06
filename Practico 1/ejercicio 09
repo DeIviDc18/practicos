@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+int n;       //numero entero
+    cout<<"ingrese numero para verificar si es par o impar: ";
+    cin>>n;
+    if(n%2==0) {
+        cout<<"El numero es par";
+    }else {
+        cout<<"El numero es impar";
+    }
+    return 0;
+}
+
+//simple y a la vez medio mmh
