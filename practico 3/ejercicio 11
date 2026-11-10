@@ -1,0 +1,32 @@
+#include <iomanip>
+#include <iostream>
+using namespace std;
+int main() {
+    double kwh, tarifa, monto;
+
+    cout << "Consumo mensual (kWh): ";
+    cin >> kwh;
+    if (kwh <= 0) {
+        cout << "SIN CONSUMO REGISTRADO" << endl;
+    }
+    if (kwh <= 100) {
+        tarifa = 0.30;
+        cout << "Categoria basica" << endl;
+    } else if (kwh <= 300) {
+        tarifa = 0.50;
+        cout << "Categoria media" << endl;
+    } else if (kwh <= 600) {
+        tarifa = 0.75;
+        cout << "Categoria alta" << endl;
+    } else {
+        tarifa = 1.10;
+        cout << "Categoria industrial" << endl;
+    }
+    monto = kwh * tarifa + 8.00;  // cargo fijo
+    cout << fixed << setprecision(2);
+    cout << "Monto a pagar (con cargo fijo Bs 8.00): " << monto << " Bs" << endl;
+    return 0;
+}
+
+
+//uso de la libreria iomanip un poco mas clara
