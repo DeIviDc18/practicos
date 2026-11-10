@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A, B, r;
+    cout << "A: ";
+    cin >> A;
+    cout << "B: ";
+    cin >> B;
+    int a = A, b = B;                   // copias para no perder los originales
+    while (b != 0) {
+        r = a % b;
+        a = b;
+        b = r;
+    }
+    cout << "MCD(" << A << ", " << B << ") = " << a << endl;
+    return 0;
+}
