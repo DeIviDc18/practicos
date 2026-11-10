@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double X, S = 0, termino;
+    int n, signo = 1;
+    cout << "X: ";
+    cin >> X;
+    cout << "n (impar): ";
+    cin >> n;
+    termino = X;                        // X/1!
+    for (int i = 1; i <= n; i = i + 2) {
+        S = S + signo * termino;
+        signo = -signo;
+        termino = termino * X * X / ((i + 1) * (i + 2));
+    }
+    cout << "S = " << S << endl;
+    return 0;
+}
