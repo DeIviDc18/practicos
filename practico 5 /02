@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N, inv = 0;
+    cout << "Numero: ";
+    cin >> N;
+    while (N > 0) {
+        inv = inv * 10 + N % 10;
+        N = N / 10;
+    }
+    cout << "Numero invertido = " << inv << endl;
+    return 0;
+}
