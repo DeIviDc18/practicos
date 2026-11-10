@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    int suma=0;
+    cout<<"ingrese NUMEROS A SUMAR: ";
+    cin >>n;
+
+    for (int i=1; i<=n; i+=2)  //lo unico q cambio fue de i++(i=i+1) a 1+=2(i=i+2= xd 
+        suma=suma+i;
+        cout<<"la suma es de: "<<suma<<endl;
+    return 0;
+}
