@@ -1,0 +1,19 @@
+#include <cmath>
+#include <iostream>
+using namespace std;
+int main() {
+    int x;
+    int n;
+    int suma=0;
+    cout << "ingrese exponente: ";
+    cin >> x;
+    cout << "ingrese potencia creciente: ";
+    cin >> n;
+
+    for(int i=1; i<=n; i++) {
+    
+        suma = suma + pow(x,i);   //uso del pow por q es creciente
+    }
+    cout<<"Suma = "<<suma<<endl;
+    return 0;
+}
