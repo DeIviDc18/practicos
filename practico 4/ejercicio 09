@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double X, Suma = 0, termino = 1;
+    int n;
+    int signo=1;
+    cout << "X: ";
+    cin >> X;
+    cout << "n: ";
+    cin >> n;
+    for (int i = 1; i <= n; i++) {
+        termino = termino * X / i;
+        Suma = Suma + termino*signo;
+        signo = -signo;
+    }
+    cout << "LA SUMA ES= " << Suma << endl;
+    return 0;
+}
