@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    int producto=1;
+    int signo=1;
+    cout<<"INGRESE NUMEROS A SUMAR: ";
+    cin >>n;
+
+    for (int i=1; i<=n; i++) {
+        producto=producto*i;
+    }
+        cout<<"El producto es de: "<<producto<<endl;
+    return 0;
+}
+
+//cambiar suma por producto y saber usarlo en el for
