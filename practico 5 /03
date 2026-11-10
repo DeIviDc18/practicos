@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    int d, pares = 0;
+    cout << "Numero: ";
+    cin >> N;
+    while (N > 0) {
+        d = N % 10;
+        if (d % 2 == 0)
+            pares = pares + 1;
+        N = N / 10;
+    }
+    cout << "Digitos pares = " << pares << endl;
+    return 0;
+}
