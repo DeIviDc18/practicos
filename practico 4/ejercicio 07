@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int Factorial=1;
+    int N;
+    cout<<"Ingrese un numero: ";
+    cin >> N;
+
+    for(int i=1; i<=N; i++) {
+        Factorial=Factorial*i;
+    }
+    cout<<"El producto FACTORIAL de: "<<N<<"!= " <<Factorial<<endl;
+    return 0;
+}
