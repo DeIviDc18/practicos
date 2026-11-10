@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int h, m, s;
+    cout << "Hora inicial (HH MM SS): ";
+    cin >> h >> m >> s;
+    while (true) {
+        if (h < 10) cout << "0";
+        cout << h << ":";
+        if (m < 10) cout << "0";
+        cout << m << ":";
+        if (s < 10) cout << "0";
+        cout << s << "\r" << flush;
+
+        for (volatile long long k = 0; k < 400000000; k++);   // espera ~1 segundo
+
+        s++;
+        if (s == 60) {
+            s = 0;
+            m++;
+        }
+        if (m == 60) {
+            m = 0;
+            h++;
+        }
+        if (h == 24)
+            h = 0;
+    }
+    return 0;
+}
