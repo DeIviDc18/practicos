@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    int suma=0;
+    int signo=1;
+    cout<<"INGRESE NUMEROS A SUMAR: ";
+    cin >>n;
+
+    for (int i=1; i<=n; i++) {
+        suma=suma+signo*i;
+        signo =-signo;
+    }
+        cout<<"la suma es de: "<<suma<<endl;
+    return 0;
+}
+
+//uso de una nueva variable signo y cerrar de mejor manera y limitar el for para q el ciclo de repeticion se pueda apreciar mejor
