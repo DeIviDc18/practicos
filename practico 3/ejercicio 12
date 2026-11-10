@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int dia, mes, año;
+    cout << "Fecha (dia mes año): ";
+    cin >> dia >> mes >> año;
+    int f = mes * 100 + dia;  // ejemplo: 21 de marzo -> 321
+    if (f >= 1221 || f < 321)
+        cout << "VERANO" << endl;
+    else if (f < 621)
+        cout << "OTOñO" << endl;
+    else if (f < 921)
+        cout << "INVIERNO" << endl;
+    else
+        cout << "PRIMAVERA" << endl;
+    return 0;
+}
