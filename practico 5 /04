@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N, copia, inv = 0;
+    cout << "Numero: ";
+    cin >> N;
+    copia = N;
+    while (copia > 0) {
+        inv = inv * 10 + copia % 10;
+        copia = copia / 10;
+    }
+    if (inv == N)
+        cout << N << " es capicua" << endl;
+    else
+        cout << N << " no es capicua" << endl;
+    return 0;
+}
