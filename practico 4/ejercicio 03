@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    int suma=0;
+    cout<<"ingrese NUMEROS A SUMAR: ";
+    cin >>n;
+
+    for (int i=1; i<=n; i++)
+        suma=suma+i*i;       //cambio en suma=suma+i a suma=suma+i*i para q sea cuadratico
+        cout<<"la suma es de: "<<suma<<endl;
+    return 0;
+}
