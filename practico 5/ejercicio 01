@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    int suma = 0;
+    cout << "Numero: ";
+    cin >> N;
+    while (N > 0) {
+        suma = suma + N % 10;
+        N = N / 10;
+    }
+    cout << "Suma de digitos = " << suma << endl;
+    return 0;
+}
