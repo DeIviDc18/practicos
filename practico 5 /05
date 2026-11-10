@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N, res = 0, pot = 1;
+    int d;
+    cout << "Numero: ";
+    cin >> N;
+    while (N > 0) {
+        d = N % 10;
+        res = res + (9 - d) * pot;
+        pot = pot * 10;
+        N = N / 10;
+    }
+    cout << "Complemento a 9 = " << res << endl;
+    return 0;
+}
