@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N, d, cantidad = 0, anterior = -1;
+    bool repetido = false;
+    cout << "PIN: ";
+    cin >> N;
+    while (N > 0) {
+        d = N % 10;
+        cantidad = cantidad + 1;
+        if (d == anterior)
+            repetido = true;
+        anterior = d;
+        N = N / 10;
+    }
+    if (cantidad == 4 && !repetido)
+        cout << "PIN valido" << endl;
+    else
+        cout << "PIN invalido" << endl;
+    return 0;
+}
